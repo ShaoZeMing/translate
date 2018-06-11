@@ -1,0 +1,20 @@
+{
+    "name": "shaozeming/translate",
+    "description": "一个集成百度翻译，有道翻译，Google 翻译的composer package",
+    "require": {
+        "guzzlehttp/guzzle": "~6.3",
+        "stichoza/google-translate-php": "^3.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ShaoZeMing",
+            "email": "szm19920426@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ShaoZeMing\\Translate\\": "src/"
+        }
+    }
+}
