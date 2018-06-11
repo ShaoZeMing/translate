@@ -7,7 +7,7 @@ return [
      *  默认使用google  google使用的是免费接口爬取，目前能用，为了确保稳定，请配置一个备用服务，
      */
     'defaults' => [
-        'driver' => 'google',   //默认使用google翻译
+        'driver' => 'baidu',   //默认使用google翻译
         'spare_driver' => 'baidu',  // 备用翻译api ,第一个翻译失败情况下，调用备用翻译服务，填写备用翻译api 需要在下面对应的drivers中配置你参数
         'from' => 'zh',   //原文本语言类型 ，目前支持：auto【自动检测】,en【英语】,zh【中文】，jp【日语】,ko【韩语】，fr【法语】，ru【俄文】，pt【西班牙】
         'to' => 'en',     //翻译文本 ：en,zh-CH,

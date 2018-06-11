@@ -76,9 +76,11 @@ class Google implements TranslateInterface
      */
     private static function checkLanguage($language)
     {
-        if (!in_array($language,self::$language)) {
+
+        if (!isset(self::$language[$language])) {
             throw new TranslateException('10000');
         }
+
         return self::$language[$language];
     }
 

@@ -78,6 +78,7 @@ Example:
  $obj = new TranslateService($config);
  $obj->setDriver('baidu')->translate('你知道我对你不仅仅是喜欢');
  print_r($result);
+ //You know I'm not just like you
  
  // 动态更改语种
  

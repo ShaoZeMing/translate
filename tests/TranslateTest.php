@@ -7,8 +7,6 @@
  */
 
 namespace ShaoZeMing\Translate\Test;
-require_once dirname(__FILE__) . '/../src/getui/IGt.Push.php';
-
 use PHPUnit\Framework\TestCase;
 use ShaoZeMing\Translate\TranslateService;
 
