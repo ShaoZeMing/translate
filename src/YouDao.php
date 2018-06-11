@@ -8,6 +8,7 @@ class YouDao implements TranslateInterface
 {
 
     protected static $language = [
+        '' =>'auto',   //中文
         'auto' =>'auto',   //中文
         'zh' =>'zh-CHS',   //中文
         'en' =>'EN',   //英文

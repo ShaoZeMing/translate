@@ -2,7 +2,8 @@
 
 namespace ShaoZeMing\Translate;
 
-use Stichoza\GoogleTranslate\TranslateClient;
+
+use ShaoZeMing\Translate\Exceptions\TranslateException;
 
 class TranslateService implements TranslateInterface
 {
@@ -16,6 +17,7 @@ class TranslateService implements TranslateInterface
     private $from;
     private $to;
     public $source = false;
+
 
 
 
@@ -42,7 +44,7 @@ class TranslateService implements TranslateInterface
 
 
 
-    public function setFromTo($from,$to){
+    public function setFromAndTo($from,$to){
 
         $this->from = $from;
         $this->to = $to;
@@ -56,34 +58,36 @@ class TranslateService implements TranslateInterface
     }
 
 
-
-
     /**
      * @author ShaoZeMing
      * @email szm19920426@gmail.com
      * @param $string
-     * @param bool $source  返回原数据结构
+     * @param bool $source
      * @return mixed
+     * @throws TranslateException
      */
     public function translate($string,$source=false)
     {
         $this->source=$source;
         $driver = $this->driver;
-        $appKey = $this->config[$driver]['app_key'];
-        $appId = $this->config[$driver]['app_id'];
-        $baseUrl = $this->config[$driver]['base_url'];
+        $appKey = $this->config['drivers'][$driver]['app_key'];
+        $appId = $this->config['drivers'][$driver]['app_id'];
+        $baseUrl = $this->config['drivers'][$driver]['base_url'];
         switch ($driver){
             case 'baidu':
-                $driver = new Baidu($appId,$appKey,$this->from,$this->to,$baseUrl,$this->options);
+                $obj = new Baidu($appId,$appKey,$this->from,$this->to,$baseUrl,$this->options);
                 break;
             case 'youdao':
-                $driver = new YouDao($appId,$appKey,$this->from,$this->to,$baseUrl,$this->options);
+                $obj = new YouDao($appId,$appKey,$this->from,$this->to,$baseUrl,$this->options);
                 break;
             case 'google':
-                $tr = new TranslateClient('zh-CN', 'en');
-                $tr->setUrlBase($baseUrl);
+                $obj = new Google($appId,$appKey,$this->from,$this->to,$baseUrl,$this->options);
                 break;
+            default:
+                throw new TranslateException(10003);
         }
+
+        return $obj->translate($string,$source);
 
 
 
