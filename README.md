@@ -2,8 +2,8 @@
 
 ---
 [![](https://travis-ci.org/ShaoZeMing/translate.svg?branch=master)](https://travis-ci.org/ShaoZeMing/translate) 
-[![](https://img.shields.io/github/package-json/v/shaozeming/translate.svg)](https://packagist.org/packages/shaozeming/translate) 
-[![](https://img.shields.io/packagecontrol/dt/ShaoZeMing/translate.svg)](https://packagist.org/packages/stichoza/shaozeming/translate)
+[![](https://img.shields.io/github/packagist/v/shaozeming/translate.svg)](https://packagist.org/packages/shaozeming/translate) 
+[![](https://img.shields.io/packagist/dt/ShaoZeMing/translate.svg)](https://packagist.org/packages/stichoza/shaozeming/translate)
 
 
 ## Installing
