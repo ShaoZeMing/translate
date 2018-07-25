@@ -59,17 +59,37 @@ class TranslateService implements TranslateInterface
 
 
     /**
+     * 执行翻译
      * @author ShaoZeMing
      * @email szm19920426@gmail.com
      * @param $string
-     * @param bool $source
+     * @param bool $source 原数据，针对google
      * @return mixed
      * @throws TranslateException
      */
     public function translate($string,$source=false)
     {
         $this->source=$source;
-        $driver = $this->driver;
+        try {
+            return $this->sendTranslate($string, $this->driver);
+        } catch (\Exception $e) {
+            //自动切换为备用渠道
+            return $this->sendTranslate($string, $this->spare_driver);
+        }
+    }
+
+
+    /**
+     * 执行请求
+     * @author ShaoZeMing
+     * @email szm19920426@gmail.com
+     * @param $string
+     * @param $driver
+     * @return mixed
+     * @throws TranslateException
+     */
+    protected function sendTranslate($string,$driver){
+
         $appKey = $this->config['drivers'][$driver]['app_key'];
         $appId = $this->config['drivers'][$driver]['app_id'];
         $baseUrl = $this->config['drivers'][$driver]['base_url'];
@@ -87,13 +107,8 @@ class TranslateService implements TranslateInterface
                 throw new TranslateException(10003);
         }
 
-        return $obj->translate($string,$source);
-
-
-
+        return $obj->translate($string, $this->source);
     }
-
-
 
 
 
