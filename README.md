@@ -1,7 +1,10 @@
 # Translate for PHP
 
 ---
-[![Build Status](https://travis-ci.org/ShaoZeMing/translate.svg?branch=master)](https://travis-ci.org/ShaoZeMing/translate) [![Latest Stable Version](https://img.shields.io/packagist/v/ShaoZeMing/translate.svg)](https://packagist.org/packages/shaozeming/translate) [![Total Downloads](https://img.shields.io/packagist/dt/ShaoZeMing/translate.svg)](https://packagist.org/packages/stichoza/shaozeming/translate) [![Downloads Month](https://img.shields.io/packagist/dm/ShaoZeMing/translate.svg)](https://packagist.org/packages/shaozeming/translate)
+[![](https://travis-ci.org/ShaoZeMing/translate.svg?branch=master)](https://travis-ci.org/ShaoZeMing/translate) 
+[![](https://img.shields.io/packagist/v/ShaoZeMing/translate.svg)](https://packagist.org/packages/shaozeming/translate) 
+[![](https://img.shields.io/packagist/dt/ShaoZeMing/translate.svg)](https://packagist.org/packages/stichoza/shaozeming/translate)
+
 
 ## Installing
 
