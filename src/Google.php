@@ -12,6 +12,7 @@ class Google implements TranslateInterface
         '' =>'auto',   //中文
         'auto' =>'auto',   //中文
         'zh' =>'zh-CN',   //中文
+        'hk' =>'zh-TW',   //繁体
         'en' =>'EN',   //英文
         'jp' =>'jp',   //日文
         'ko' =>'kor',  //韩文

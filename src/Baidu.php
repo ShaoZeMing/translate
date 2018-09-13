@@ -11,6 +11,7 @@ class Baidu implements TranslateInterface
         '' =>'auto',   //中文
         'auto' =>'auto',   //中文
         'zh' =>'zh',   //中文
+        'hk' =>'cht',   //繁体
         'en' =>'en',   //英文
         'jp' =>'jp',   //日文
         'ko' =>'kor',  //韩文

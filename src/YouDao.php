@@ -11,6 +11,7 @@ class YouDao implements TranslateInterface
         '' =>'auto',   //中文
         'auto' =>'auto',   //中文
         'zh' =>'zh-CHS',   //中文
+        'hk' =>'zh-CH',   //有道不支持繁体
         'en' =>'EN',   //英文
         'jp' =>'ja',   //日文
         'ko' =>'ko',  //韩文
